@@ -5,7 +5,7 @@
 PVCurve <- function(x,y){
   
   #Encontrar punto de inflexión
-  Inflexion <- ede(Curva$UnoMenosCRA, Curva$InversePhi, 0)
+  Inflexion <- ede(x, y, 0)
   
   #Generar curvas según punto de inflexión
   #Curva 1
