@@ -1,5 +1,5 @@
 # Preassure - Volume Curve
 
-##Intalation instructions
-library(remotes)
+## Instalation instructions
+library(remotes)\\
 install_github("klauswiese/PVCurve")
