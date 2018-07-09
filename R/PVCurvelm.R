@@ -64,7 +64,7 @@ PVCurvelm <- function(x,y){
   
   #Distribución de Puntos
   plot(x, y, xlab="1 - CRA", ylab=expression(paste("1 / ", psi)), pch=16, 
-       main="Curva Presión - Volumen \n Punto Medio",
+       main="Curva Presión - Volumen \n Interpolación",
        xlim=c(-0.001, max(x)+0.5), 
        ylim=c(-0.001, max(y)))
   abline(v=0)
