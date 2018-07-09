@@ -1,5 +1,7 @@
 #Functions
 export("PVCurve")
+export("PVCurvelm")
+export("PVCurveMean")
 
 #Packages
 import("inflection")
