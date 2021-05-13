@@ -1,24 +1,26 @@
-#Data
+#Datos
 curva <- read.csv("data/Results.csv")
 
-install.packages("remotes")
+#install.packages("remotes")
+#install_github("klauswiese/PVCurve")
 library(remotes)
-install_github("klauswiese/PVCurve")
 library(PVCurve)
 
+#Inverso IPH
 CRA <- 1 - curva$CRA
 IPH <- 1 / curva$Psi
 
-
+#Curva
 PVCurve(CRA, IPH)
 
-#Fit a power curve
+#Ajuste de la curva
 m <- nls(IPH~I(CRA^power),start = list(power = -1), trace = T)
 
+#Explorar sumario resultado
 summary(m)
 
 
-#Plot the fitted curve vs the known curve
+#Gráfico de curva ajustada vr curva conocida
 power <- round(summary(m)$coefficients[1], 3)
 power.se <- round(summary(m)$coefficients[2], 3)
 plot(IPH ~ CRA, main = "Fitted power model", sub = "Blue: fit; green: known")
