@@ -1,8 +1,8 @@
 #Datos
 curva <- read.csv("data/Results.csv")
 
-#install.packages("remotes")
-#install_github("klauswiese/PVCurve")
+#Librerias
+#remotes::install_github("klauswiese/PVCurve")
 library(remotes)
 library(PVCurve)
 
