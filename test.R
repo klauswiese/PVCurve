@@ -47,11 +47,9 @@ lines(s, predict(m.2, list(CRA = s)), lty = 1, col = "blue")
 lines(s, predict(m, list(CRA = s)), lty = 2, col = "magenta")
 segments(CRA, IPH, CRA, fitted(m.2), lty = 2, col = "red")
 
-
+#Akaike Information Criterion
 AIC(m)
 AIC(m.2)
-
-
 
 #LOG
 m.l <- lm(log(IPH) ~ CRA)
