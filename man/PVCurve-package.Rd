@@ -1,5 +1,5 @@
-\name{PVCurve-package}
-\alias{PVCurve-package}
+\name{PVCurve}
+\alias{PVCurve}
 \alias{PVCurve}
 \docType{package}
 \title{
