@@ -81,8 +81,6 @@ PVCurveMean <- function(x,y){
   ######################
   #PP <- y[2] - (coef(lm2)[2] * x[2] + coef(lm2)[1])
   
-  #Ecuación de la recta 2
-  #Y <- coef(lm2)[2] * x + coef(lm2)[1]
   
   
   Resultados <- list(InversoPotencialOsmoticoPlenaTurgencia = as.numeric(IPOPT), 
