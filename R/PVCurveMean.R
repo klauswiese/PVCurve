@@ -76,13 +76,7 @@ PVCurveMean <- function(x,y){
   points(VHS, 0 , pch=4)
   text(VHS, 0.15, expression(V_s))
   
-  ######################
-  #Potencial de presión#   
-  ######################
-  #PP <- y[2] - (coef(lm2)[2] * x[2] + coef(lm2)[1])
-  
-  
-  
+
   Resultados <- list(InversoPotencialOsmoticoPlenaTurgencia = as.numeric(IPOPT), 
                      InversoPotencialOsmoticoTurgenciaCero=as.numeric(IPOTC), 
                      ContenidoHidricoRelativoTurgenciaCero=as.numeric(CHRTC), 
