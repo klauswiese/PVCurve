@@ -5,7 +5,7 @@
 Preassurve - Volume Curve
 }
 \description{
-Estimate parameteres based on Preassurve - Volume Curve}
+Estima parametros basado en la curva presión - volumen}
 \usage{
 PVCurve(x,y)
 }
