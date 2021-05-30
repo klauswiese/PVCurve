@@ -84,11 +84,6 @@ PVCurveMean <- function(x,y){
   #Ecuación de la recta 2
   #Y <- coef(lm2)[2] * x + coef(lm2)[1]
   
-  #legend("bottomright", c(expression(paste("1 / ", psi^100)), 
-  #                        expression(paste("1/", psi^0)), 
-  #                        expression(CHR^0), 
-  #                        expression(V_s)), 
-  #       pch=c(10,8,6,4))
   
   Resultados <- list(InversoPotencialOsmoticoPlenaTurgencia = as.numeric(IPOPT), 
                      InversoPotencialOsmoticoTurgenciaCero=as.numeric(IPOTC), 
