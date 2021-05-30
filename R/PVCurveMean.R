@@ -87,7 +87,6 @@ PVCurveMean <- function(x,y){
                      InversoPotencialOsmoticoTurgenciaCero=as.numeric(IPOTC), 
                      ContenidoHidricoRelativoTurgenciaCero=as.numeric(CHRTC), 
                      VolumenHidricoSimplastico=as.numeric(VHS))
-                     #PotencialPresion=as.numeric(PP))
   return(Resultados)
   print(Resultados)
   
