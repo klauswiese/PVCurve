@@ -20,10 +20,6 @@ PVCurvelm <- function(x,y){
   #Regresion entre los puntos en donde ocurre la caida
   t0 <- df[(Inflexion-4):length(df$CRA),]
   
-  #t0 <-data.frame(rbind(Punto, Punto2))#data frame con los puntos donde ocurre la caida
-  #names(t0) <- c("CRA", "IPH")#Nombres variables
-  
-  #lm0 <-lm(IPH ~ CRA, data=t0)#Regresion
   
   rhs <- function(x, b0, b1) {
     b0 + x^b1
