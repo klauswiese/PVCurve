@@ -1,6 +1,6 @@
 #Curva Presión - Volumen
 #K. Wiese Julio 2018
-###################################################################
+########################
 
 PVCurve <- function(x,y){
   
@@ -28,44 +28,44 @@ PVCurve <- function(x,y){
   #Índices derivados de la curva presión - volumen
   
   
-  ####################################################
-  #Inverso del potencial osmótico en plena turgencia #
-  ####################################################
+  
+  #Inverso del potencial osmótico en plena turgencia
+  ##################################################
   PI <- c()
   points(x[Inflexion[1]], y[Inflexion[1]], pch=20, col="red")
   text(x[Inflexion[1]] + 0.05, y[Inflexion[1]] + 0.05, expression(paste(psi, rho, "= 0")))
   
-  ####################################################
-  #Inverso del potencial osmótico en plena turgencia #
-  ####################################################
+  
+  #Inverso del potencial osmótico en plena turgencia
+  ##################################################
   IPOPT <- lm2$coefficients[1]
   points(0, IPOPT, pch=10)
   text(0.01, IPOPT + 0.1, expression(paste("1 / ", psi^100)))
   
-  ####################################################
-  #Inverso del potencial osmótico a turgencia cero   #
-  ####################################################
+  
+  #Inverso del potencial osmótico a turgencia cero
+  ################################################
   IPOTC <- predict(lm2, 1)[1]
   points(0, IPOTC , pch=8)
   text(0 +0.1, IPOTC, expression(paste("1/", psi^0)))
   
-  #############################################
-  #Contenido hídrico relativo a turgencia cero#
-  #############################################
+  
+  #Contenido hídrico relativo a turgencia cero
+  ############################################
   CHRTC <- x[Inflexion[1]] 
   points(CHRTC, 0 , pch=6)
   text(CHRTC, 0.15, expression(CHR^0))
   
-  #############################
-  #Volumen hídrico simplástico#
-  #############################
+  
+  #Volumen hídrico simplástico
+  ############################
   VHS <- (0 - lm2$coefficients[1]) / lm2$coefficients[2]
   points(VHS, 0 , pch=4)
   text(VHS, 0.15, expression(V_s))
   
-  ######################
-  #Potencial de presión#   
-  ######################
+  
+  #Potencial de presión   
+  #####################
   PP <- y[2] - (coef(lm2)[2] * x[2] + coef(lm2)[1])
   
   #Ecuación de la recta 2
