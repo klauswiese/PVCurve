@@ -20,10 +20,10 @@ m <- nls(IPH~I(CRA^power),start = list(power = -1), trace = T)
 summary(m)
 
 
-#Gráfico de curva ajustada vr curva conocida
+#Gráfico de curva ajustada vs curva conocida
 power <- round(summary(m)$coefficients[1], 3)
 power.se <- round(summary(m)$coefficients[2], 3)
-plot(IPH ~ CRA, main = "Fitted power model", sub = "Blue: fit; green: known")
+plot(IPH ~ CRA, main = "Fitted power model", sub = "Azul: Ajuste; Vede: Conocido")
 s <- seq(0, 1, length = 100)
 lines(s, s^3, lty = 2, col = "green")
 lines(s, predict(m, list(CRA = s)), lty = 1, col = "blue")
